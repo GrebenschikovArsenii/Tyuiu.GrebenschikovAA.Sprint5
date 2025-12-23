@@ -8,7 +8,6 @@ namespace Tyuiu.GrebenschikovAA.Sprint5.Task7.V27.Test
         DataService ds = new DataService();
 
         string path = Path.Combine(Path.GetTempPath(), "InPutDataFileTask7V27.txt");
-        //string newPath = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V27.txt");
 
         [TestMethod]
         public void CheckPath()
@@ -40,7 +39,7 @@ namespace Tyuiu.GrebenschikovAA.Sprint5.Task7.V27.Test
 
 
 
-            string wait = "???????????????????";
+            string wait = "dddddddddddd";
 
             Assert.AreEqual(wait, text);
         }

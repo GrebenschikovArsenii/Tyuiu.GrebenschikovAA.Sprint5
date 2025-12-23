@@ -11,17 +11,8 @@ namespace Tyuiu.GrebenschikovAA.Sprint5.Task7.V27.Lib
             using (StreamReader reader = new StreamReader(path))
             {
                 string text = reader.ReadToEnd();
-
-                try
-                {
-                    text = text.Replace("  ", "");
-                    File.WriteAllText(newPath, text);
-
-                }
-                catch (ArgumentNullException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
+                text = text.Replace("  ", "");
+                File.WriteAllText(newPath, text);
 
             }
 
