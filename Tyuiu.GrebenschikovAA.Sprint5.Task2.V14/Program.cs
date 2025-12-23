@@ -22,14 +22,26 @@ namespace Tyuiu.GrebenschikovAA.Sprint5.Task2.V14
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* 2.12x^3 + 1.05x^2 + 4.1x * 2, x=2                                       *");
+            int[,] array = new int[3, 3];
+
+            Console.WriteLine("Введите элементы массива:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.WriteLine($"Введите элемент [{i},{j}]:");
+                    array[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* Результат:                                                              *");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            string path = Path.Combine("C:", "DataSprint5", "InPutDataFileTask2V14.txt");
-            Console.Write("Количество слов длиной 7 символов равно " + ds.LoadFromDataFile(path));
-            Console.ReadLine();
+            var result = ds.SaveToFileTextData(array);
+            //Console.WriteLine(result);
+            Console.WriteLine("Файл " + result + " создан.");
+            Console.ReadKey();
         }
     }
 }
