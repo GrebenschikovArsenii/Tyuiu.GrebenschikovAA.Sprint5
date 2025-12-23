@@ -6,10 +6,10 @@ namespace Tyuiu.GrebenschikovAA.Sprint5.Task3.V20.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            double y = Math.Round(x / (Math.Sqrt(x * x) + x), 3);
+            double f = Math.Round(x / (Math.Sqrt(x * x) + x), 3);
             string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.bin");
             BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate));
-            writer.Write(y);
+            writer.Write(f);
             writer.Close();
             return path;
         }
