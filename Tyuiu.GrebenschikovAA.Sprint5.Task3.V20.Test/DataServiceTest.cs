@@ -1,3 +1,5 @@
+using Tyuiu.GrebenschikovAA.Sprint5.Task3.V20.Lib;
+
 namespace Tyuiu.GrebenschikovAA.Sprint5.Task3.V20.Test
 {
     [TestClass]
@@ -8,8 +10,9 @@ namespace Tyuiu.GrebenschikovAA.Sprint5.Task3.V20.Test
         {
             int x = 3;
 
+            DataService dataService = new DataService();
 
-            string filePath = SaveToFileTextData(x);
+            string filePath = dataService.SaveToFileTextData(x);
 
 
             Assert.IsTrue(File.Exists(filePath), "‘айл не был создан.");
@@ -30,11 +33,6 @@ namespace Tyuiu.GrebenschikovAA.Sprint5.Task3.V20.Test
 
 
             Console.WriteLine($"ќжидаемое и записанное значение: {valueFromFile}");
-        }
-
-        private string SaveToFileTextData(int x)
-        {
-            throw new NotImplementedException();
         }
     }
 }
